@@ -903,8 +903,17 @@ PlotIntegPaths <- function(mSetObj=NA, format = "png", dpi = 72, width = 9, labe
   return(mSetObj);
 }
 
-# Function to return the unique m/zs from the selected pathways 
-# based on the compounds
+#' Function to return the unique m/zs from the selected pathways 
+#' based on the compounds
+#' @description Function to create a boxplot of m/z features
+#' within a specific pathway. m/z features used by the original
+#' mummichog algorithm are highlighted with an asterisk. 
+#' @param mSetObj Input the name of the created mSetObj object.
+#' @param msetNM Character, input the name of the pathway. 
+#' @author Jasmine Chong, Jeff Xia \email{jeff.xia@mcgill.ca}
+#' McGill University, Canada
+#' License: GNU GPL (>= 2)
+#' @export                   
 
 GetMummichogMZHits <- function(mSetObj=NA, msetNm){
   
