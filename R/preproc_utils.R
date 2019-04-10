@@ -25,7 +25,7 @@
 #' @import BiocParallel
 #' @import parallel
 
-ImportRawMSData <- function(foldername, format = "png", dpi = 72, width = 9, par.cores=TRUE){
+ImportRawMSData <- function(foldername, format = "png", dpi = 72, width = 9, par.cores=TRUE, set.cores=0){
 
   msg.vec <<- vector(mode="character")
   
@@ -79,7 +79,11 @@ ImportRawMSData <- function(foldername, format = "png", dpi = 72, width = 9, par
   
   if(!.on.public.web & par.cores==TRUE){
     cores <- parallel::detectCores()
-    num_cores <- ceiling(cores/2) 
+    if(set.cores==0){
+      num_cores <- ceiling(cores/2)
+     } else {
+      num_cores <- set.cores
+     }
     print(paste0("The number of CPU cores to be used is set to ", num_cores, "."))
     register(bpstart(BiocParallel::MulticoreParam(num_cores)))
   }
