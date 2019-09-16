@@ -11,7 +11,7 @@ FormatPeakList(annotPeaks, annParams, filtIso = TRUE,
 \item{annotPeaks}{The object created using the PerformPeakAnnotation.}
 
 \item{annParams}{The object created using the SetAnnotationParam function, 
-containing user's specified or default parameters for downstream 
+containing users specified or default parameters for downstream 
 raw MS data pre-processing.}
 
 \item{filtIso}{Logical, filter out all isotopes except for [M]+ for 
