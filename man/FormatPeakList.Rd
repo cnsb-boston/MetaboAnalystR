@@ -3,6 +3,7 @@
 \name{FormatPeakList}
 \alias{FormatPeakList}
 \title{Format Peak List}
+\description{This function formats the CAMERA output to a usable format for MetaboAanlyst.}
 \usage{
 FormatPeakList(annotPeaks, annParams, filtIso = TRUE,
   filtAdducts = FALSE, missPercent = 0.5)
@@ -24,9 +25,6 @@ positive ion more and [M-H]- for negative ion mode. By default it is set to fals
 \item{missPercent}{Numeric, specify the threshold to remove features
 missing in X\% of samples. For instance, 0.5 specifies to remove features
 that are missing from 50% of all samples per group.}
-}
-\description{
-This function formats the CAMERA output to a usable format for MetaboAanlyst.
 }
 \author{
 Jasmine Chong \email{jasmine.chong@mail.mcgill.ca},
