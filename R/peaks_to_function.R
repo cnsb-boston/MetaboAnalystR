@@ -618,9 +618,10 @@ PerformGSEA <- function(mSetObj=NA, lib, permNum = 1000){
     mummichog.lib <- readRDS(paste("../../libs/mummichog/", filenm, sep=""));
   }else{
     if(!file.exists(filenm)){
-      mum.url <- paste("https://www.metaboanalyst.ca/resources/libs/mummichog/", filenm, sep="")
-      download.file(mum.url, destfile = filenm, method="libcurl", mode = "wb")
-      mummichog.lib <- readRDS(filenm);
+      # mum.url <- paste("https://www.metaboanalyst.ca/resources/libs/mummichog/", filenm, sep="")
+      # download.file(mum.url, destfile = filenm, method="libcurl", mode = "wb")
+      # mummichog.lib <- readRDS(filenm);
+      mummichog.lib <- readRDS(file.path(dat_dir,filenm));
     }else{
       mummichog.lib <- readRDS(filenm);
     }
