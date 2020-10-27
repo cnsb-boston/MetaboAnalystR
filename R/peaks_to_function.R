@@ -585,7 +585,7 @@ new_adduct_mzlist <- function(mSetObj=NA, mw){
 #'@export
 #'@import fgsea
 
-PerformGSEA <- function(mSetObj=NA, lib, permNum = 1000){
+PerformGSEA <- function(mSetObj=NA, lib, permNum = 1000, dat_dir="" ){
   
   mSetObj <- .get.mSet(mSetObj);
   
