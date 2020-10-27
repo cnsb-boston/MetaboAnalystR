@@ -205,6 +205,7 @@ SanityCheckMummichogData <- function(mSetObj=NA){
 #'@param mSetObj Input the name of the created mSetObj object 
 #'@param lib Input the name of the organism library, default is hsa 
 #'@param permNum Numeric, the number of permutations to perform
+#'@param dat_dir directory where rds files located
 #'@author Jasmine Chong, Jeff Xia \email{jeff.xia@mcgill.ca}
 #'McGill University, Canada
 #'License: GNU GPL (>= 2)
@@ -579,6 +580,7 @@ new_adduct_mzlist <- function(mSetObj=NA, mw){
 #'@param mSetObj Input the name of the created mSetObj object
 #'@param lib Input the name of the organism library, default is hsa
 #'@param permNum Numeric, the number of permutations to perform
+#'@param dat_dir directory where rds files located
 #'@author Jasmine Chong, Jeff Xia \email{jeff.xia@mcgill.ca}
 #'McGill University, Canada
 #'License: GNU GPL (>= 2)
